@@ -15,7 +15,7 @@ Designing interfaces for high-stress disaster situations requires radical depart
 | Usability Heuristic | Common Web App Mistake | resQroute Crisis Standard | Status |
 | :--- | :--- | :--- | :--- |
 | **Cognitive Load** | Displaying dense text paragraphs & complex settings menus | Single primary action button (**"Find Safe Route"**); prominent status badges | `PASS` |
-| **Visual Contrast** | Subtle gray-on-gray text and low-contrast buttons | High-contrast WCAG AAA compliance (Contrast ratio $> 7:1$); dark slate background | `PASS` |
+| **Visual Contrast** | Subtle gray-on-gray text and low-contrast buttons | High-contrast WCAG AAA compliance (Contrast ratio > 7:1); dark slate background | `PASS` |
 | **Data Freshness** | Hidden timestamps or assumed live data | Explicit freshness banners (**"Reported 2 mins ago"**); warning for stale graph data | `PASS` |
 | **Accessibility Focus** | Hidden accessibility toggles in settings | Immediate accessibility profile selection on onboarding screen | `PASS` |
 | **Confidence Transparency**| Unexplained AI or system recommendations | Clear textual rationale (**"Route A rejected: Submerged road at Sector 4"**) | `PASS` |

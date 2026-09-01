@@ -4,7 +4,7 @@
 
 `resQroute` is a **Web-First**, real-time disaster-response, relocation, and shelter-intelligence platform built on the foundational thesis:
 
-$$\text{SHORTEST ROUTE} \neq \text{SAFEST ROUTE}$$
+**SHORTEST ROUTE ≠ SAFEST ROUTE**
 
 During natural disasters (floods, landslides, storm surges), a shelter may technically exist and have open space, but citizens may be unable to reach or use it because road segments are submerged, bridges are compromised, or physical route attributes violate accessibility requirements. `resQroute` replaces conventional shortest-path routing with **Risk-Aware, Accessibility-Aware, and Capacity-Aware Relocation Recommendations**.
 

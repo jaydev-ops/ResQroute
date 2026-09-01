@@ -35,7 +35,7 @@ This document records the critical architectural choices, technical trade-offs, 
 - **Status**: Accepted
 - **Context**: Preprocessed OSRM road graphs are extremely fast for distance matrix calculations but static. Dynamic disaster road closures cannot instantly re-weight OSRM graphs without expensive graph re-compilation.
 - **Alternatives Considered**: Full dynamic GraphHopper/Valhalla custom edge-reweighting service (`[ENHANCED]`), Pure PostGIS pgRouting (slow for large road networks).
-- **Decision**: Use OSRM for fast $K$-shortest candidate route generation, followed by PostGIS dynamic spatial overlay checks (`ST_Intersects`) against active closed edge buffers (`road_edge_overlays`).
+- **Decision**: Use OSRM for fast K-shortest candidate route generation, followed by PostGIS dynamic spatial overlay checks (`ST_Intersects`) against active closed edge buffers (`road_edge_overlays`).
 - **Consequences**: Combines sub-50ms OSRM route generation with sub-10ms PostGIS hazard overlay rejection; if all OSRM candidates intersect hazards, system safely returns `NO_SAFE_ROUTE_AVAILABLE`.
 
 ---

@@ -90,9 +90,9 @@ For the `[MVP]` phase, `resQroute` adopts a **Modular Monolith** pattern. Micros
 - Writes immutable evidence records to `hazard_evidence` and updates active `road_edge_overlays`.
 
 ### 3.3. Deterministic Overlay Routing Engine
-- **Step 1 (Candidate Generation)**: Queries OSRM API to fetch $K$-shortest alternative paths between origin coordinates and target shelters.
+- **Step 1 (Candidate Generation)**: Queries OSRM API to fetch K-shortest alternative paths between origin coordinates and target shelters.
 - **Step 2 (PostGIS Overlay Check)**: Performs `ST_Intersects(route_geometry, buffer(overlay_geometry))` against active closed edges (`is_closed = TRUE` in `road_edge_overlays`).
-- **Step 3 (Safety & Attribute Filter)**: Rejects candidate routes intersecting confirmed hard closures or violating accessibility limits (e.g. slope $> 5\%$ for wheelchair users).
+- **Step 3 (Safety & Attribute Filter)**: Rejects candidate routes intersecting confirmed hard closures or violating accessibility limits (e.g. slope > 5% for wheelchair users).
 - **Step 4 (Deterministic Re-ranking)**: Ranks surviving candidates by safety score, travel time, and road quality.
 - **Step 5 (Fail-Safe Assertion)**: If zero routes survive overlay checks, the engine returns **`NO_SAFE_ROUTE_AVAILABLE`** accompanied by specific hazard explanations.
 
